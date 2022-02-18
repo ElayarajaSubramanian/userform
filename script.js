@@ -9,7 +9,7 @@ const state = document.getElementById("state");
 const country = document.getElementById("country");
 const btn = document.getElementById("btn");
 const table = document.querySelector("table");
-const rows = document.querySelectorAll("tr");
+let rows = document.querySelectorAll("tr");
 
 //2. Add elements value into table row
 
@@ -32,6 +32,7 @@ btn.addEventListener("click", (e) => {
   <td>${state.value}</td>
   <td>${country.value}</td>`;
   table.append(row);
+  rows = document.querySelectorAll("tr");
   fname.value = "";
   lname.value = "";
   address.value = "";
